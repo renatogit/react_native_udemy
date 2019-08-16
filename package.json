@@ -6,7 +6,7 @@
 		"start": "react-native start",
 		"test": "jest",
 		"lint": "eslint .",
-		"android": "react-native run-android"
+		"android": "react-native run-android && react-native log-android"
 	},
 	"dependencies": {
 		"react": "16.8.6",
