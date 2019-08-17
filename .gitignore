@@ -21,7 +21,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-
+yarn.lock
+.vscode/
 # Android/IntelliJ
 #
 build/
@@ -145,4 +146,4 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
-yarn.lock
+
