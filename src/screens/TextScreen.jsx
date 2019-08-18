@@ -4,22 +4,24 @@ import { Text, View, TextInput } from 'react-native';
 // devemos add um sempre que usarmos o Input
 
 const TextScreen = () => {
-	const [name, setName] = useState('');
+	const [password, setPassword] = useState('');
 	return (
 		<View>
-			<Text>Enter Name:</Text>
+			<Text>Enter Password:</Text>
 			<TextInput
 				// Por padrão o input já vem com algumas configurações
 				// Para anular essas conigurações vamos add alguns atributos
 				style={styles.input}
 				autoCapitalize="none"
 				autoCorrect={false}
-				value={name}
+				value={password}
 				onChangeText={newValue => {
-					setName(newValue);
+					setPassword(newValue);
 				}}
 			/>
-			<Text>My name is {name}</Text>
+			{password.length < 4 ? (
+				<Text style={styles.textError}>Password must be 4 characters!</Text>
+			) : null}
 		</View>
 	);
 };
@@ -29,6 +31,9 @@ const styles = {
 		margin: 15,
 		borderColor: 'black',
 		borderWidth: 1,
+	},
+	textError: {
+		color: 'red',
 	},
 };
 
